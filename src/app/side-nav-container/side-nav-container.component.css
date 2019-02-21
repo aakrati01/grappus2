@@ -1,0 +1,14 @@
+.wrapper{
+    background: rgb(23, 23, 23);
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+#inputt{
+    background-color: black;
+    border: 1px solid #6b6464;
+    padding: 0.5rem;
+    width: 80%;
+    color: white;
+    border-radius: 5px;
+}

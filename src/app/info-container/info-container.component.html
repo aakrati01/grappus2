@@ -1,0 +1,89 @@
+<div style="background: rgb(23, 23, 23);height: calc(100vh - 22rem);">
+  <div style="color: white;padding:1rem 0rem 0.5rem 1rem;; font-size: 20px;"> Choose from our smart filters</div>
+  <span style="color:#a5a3a3;padding-left: 1rem"> Loren Ipsum dolor sit amet, cosectetur </span>
+
+<div>
+    <mat-tab-group>
+      <mat-tab label="Company"> Content 1 </mat-tab>
+      <mat-tab label="Investor"> Content 2 </mat-tab>
+      <mat-tab label="Person"> Content 3 </mat-tab>
+      <mat-tab label="Sector"> Content 1 </mat-tab>
+      <mat-tab label="Industry"> Content 2 </mat-tab>
+      <mat-tab label="Sub Industry"> Content 3 </mat-tab>
+      <mat-tab label="Region"> Content 3 </mat-tab>
+    </mat-tab-group>
+</div>
+<div style="margin: 1rem">
+  <mat-chip-list>
+    <mat-chip style="color: magenta; background-color: #483348;">Profile</mat-chip>
+    <mat-chip style="color: #e66c03; background: #301a03;">Comparables</mat-chip>
+    <mat-chip style="color: #03b303; background: #1d361d;">Strategic gaps</mat-chip>
+    <mat-chip style="color: #d80707; background: #2e0b03;">Potential acqurers</mat-chip>
+    <mat-chip style="color: #066be8ed;background: #022a46;">Fast Path</mat-chip>
+  </mat-chip-list>
+</div>
+<div>
+  <!-- <div  style="display:grid;grid-template-columns:repeat(2,1fr);">
+    <div *ngFor="let item of items" style="color:#a5a3a3;padding: 0.5rem;border: 1px solid #524949; border-radius: 4px;
+    margin:0.5rem 1rem 0.5rem 0.5rem;">{{items?.name}}</div>  </div> -->
+</div>
+<div id= "container">
+  <div ng2-carouselamos class="slides-wrapper" style="color:#a5a3a3;padding: 0.5rem;border: 1px solid #524949; border-radius: 4px;
+  margin:0.5rem 1rem 0.5rem 0.5rem;"
+    [items]="items"
+    [width]="900"
+    [$prev]="prev"
+    [$next]="next"
+    [$item]="item">
+  </div>
+  <ng-template #prev>
+    <img src="assets/images/left-arrow.png" id="right" />
+  </ng-template>
+  <ng-template #next>
+    <img src="assets/images/right-arrow.png" id="right" />
+  </ng-template>
+  <ng-template #item let-item let-i="index">
+    <div>
+      {{item.name}}
+    </div>
+  </ng-template>
+</div>
+</div>
+
+<div style="background: rgb(23, 23, 23);margin-top: 2rem;">
+  <div style="color: white;padding:1rem 0rem 0.5rem 1rem;; font-size: 20px;"> Discover the popular sectors we track</div>
+  <span style="color:#a5a3a3;padding-left: 1rem"> Loren Ipsum dolor sit amet, cosectetur </span>
+  <div style="margin: 1rem">
+    <mat-chip-list >
+      <mat-chip class="chip-item">Enterprise Structure</mat-chip>
+      <mat-chip class="chip-item">Enterprise Software</mat-chip>
+      <mat-chip class="chip-item">AI & Analytics</mat-chip>
+      <mat-chip class="chip-item">Internet of things</mat-chip>
+      <mat-chip class="chip-item">FinTech</mat-chip>
+      <mat-chip class="chip-item">Industrial Tech</mat-chip>
+      <mat-chip class="chip-item">Retail & Ecommerce Tech</mat-chip>
+      <mat-chip class="chip-item">Travel and Hospitality</mat-chip>
+      <mat-chip class="chip-item">Other Verticals</mat-chip>
+
+    </mat-chip-list>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);">
+    <div style="margin: 1rem;border: 2px solid #222121; padding: 1rem 0.5rem 0.5rem 0.5rem;" *ngFor="let item of sectors">
+      <div style="display: flex"> 
+        <span style="color:#a5a3a3" fxFlex=60>
+          <i *ngIf="item?.name == 'Enterprise Infrastructure'" class="fas fa-desktop " style="color: #d80707; margin-right: 0.5rem"></i>
+          <i *ngIf="item?.name == 'Enterprise Software'" class="fas fa-shopping-basket" style="color: #d80707" aria-hidden="true"></i>
+          <i *ngIf="item?.name == 'Travel and Hospitality'" class="fas fa-plane" style="color: #d80707"></i>
+          {{item?.name}}
+        </span>
+        <span fxFlex=40 style="color: #6f6e6e; margin-left: 0.5rem;">VIEW INDUSTRIES</span>
+      </div>
+      <button *ngIf="item?.name == 'Enterprise Infrastructure'" mat-button id="btn" >
+        <div style="font-size: 14px; color: white; display: flex; align-items: center;">
+         <span style="padding-left: 5px">Enterprise Servers & Systems</span>
+         <i class="fas fa-download" style="margin-left: 0.5rem"></i>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>

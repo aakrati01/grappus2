@@ -1,0 +1,45 @@
+
+  ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+    color:white;
+    background-color: rgb(23, 23, 23);
+    border-bottom: 2px solid crimson;
+ }
+
+ ::ng-deep .mat-tab-group{
+    background:rgb(23, 23, 23);
+    color: white;
+    border-bottom: crimson;
+ }
+
+ ::ng-deeep .mat-tab-labels{
+     color: gainsboro;
+ }
+
+ #container{
+   width: 100%;
+   /* margin: 5rem auto;
+   padding: 0;
+   background: #fff; */
+ }
+ .items{
+   min-width: 300px;
+   height: 100px;
+   background: #ececec;
+ }
+ 
+#left, #right { 
+  margin: 30px;
+}
+
+#btn {
+  background: black;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-top: 0.85rem;
+}
+
+.chip-item{
+  color:#b0b0b0; 
+  background-color: #474444;
+  margin: 0.75rem;
+}

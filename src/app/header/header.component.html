@@ -1,0 +1,24 @@
+<div style="display: flex;padding: 1rem;background: rgb(23, 23, 23);">
+  <div fxFlex=33>
+    <span style="color: white">KOGNETICS</span>
+  </div>
+  <div fxFlex=33>
+    <!-- search box -->
+    <section class="search-box-kognetics">
+      <section class="my-kognetics-search">
+        <input type="text" style="width: 100%;" class="searchKognetics" (keyup)="searchkey" [(ngModel)]="searchkey" size=35 placeholder="Search for companies, people and Investors">
+        <button *ngIf="searchkey == ''" disabled matSuffix mat-icon-button style="margin-left: -2.5rem;height:1.25rem; top:0.5rem">
+          <i style="color:#858585;font-size: 0.75rem" class="fas fa-search" aria-hidden="true"></i>
+        </button>
+        <button mat-button *ngIf="!searchkey==''" matSuffix mat-icon-button aria-label="Clear" (click)="searchkey='';"
+          style="margin-left: -2.5rem;height:1.25rem; top:0.5rem">
+          <i style="color:#858585;font-size: 0.75rem" class="fas fa-close" aria-hidden="true"></i>
+        </button>
+
+      </section>
+    </section>
+  </div>
+  <div fxFlex=33>
+
+  </div>
+</div>
